@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>New case | Review Workspace</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/vendor/jquery-3.7.1.min.js" defer></script>
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        Review Workspace
+        <small>Product safety</small>
+      </a>
+      <form class="header-search" action="search-results.html" method="get" role="search">
+        <label class="sr-only" for="header-search">Search cases</label>
+        <input id="header-search" name="q" type="search" placeholder="Try kettle" required>
+        <button class="button" type="submit">Search</button>
+      </form>
+      <div class="account">
+        <strong>M. Chen</strong>
+        Analyst
+      </div>
+    </header>
+    <div class="workspace">
+      <nav class="sidebar" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="list.html">All cases</a></li>
+          <li><a href="new-case.html" aria-current="page">New case</a></li>
+        </ul>
+      </nav>
+      <main id="main" tabindex="-1">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="list.html">All cases</a></li>
+            <li>New case</li>
+          </ol>
+        </nav>
+        <div class="page-heading">
+          <div>
+            <h1>Create a review case</h1>
+            <p class="muted">Fields marked * are required.</p>
+          </div>
+        </div>
+        <section class="example-state state-panel" id="case-ready" tabindex="-1">
+          <h2>Case creation preview</h2>
+          <p>
+            The next step would create a draft for the assigned reviewer. No case has been saved.
+          </p>
+          <a href="new-case.html">Return to the form</a>
+        </section>
+        <section class="example-state state-panel" id="draft-preview" tabindex="-1">
+          <h2>Draft preview</h2>
+          <p>
+            A saved draft would remain outside the review queue until it is ready to submit. This
+            example does not save the form.
+          </p>
+          <a href="new-case.html">Return to the form</a>
+        </section>
+        <form class="case-form" action="new-case.html#case-ready" method="get">
+          <fieldset>
+            <legend>1. Case information</legend>
+            <div class="field">
+              <label for="case-title">Case title *</label>
+              <input
+                id="case-title"
+                name="title"
+                type="text"
+                required
+                maxlength="100"
+                placeholder="Kettle overheating report"
+              >
+            </div>
+            <div class="form-grid">
+              <div class="field">
+                <label for="product">Product name *</label>
+                <input
+                  id="product"
+                  name="product"
+                  type="text"
+                  required
+                  placeholder="Countertop kettle"
+                >
+              </div>
+              <div class="field">
+                <label for="model">Model or variant</label>
+                <input id="model" name="model" type="text" placeholder="K1">
+              </div>
+              <div class="field">
+                <label for="concern">Concern category *</label>
+                <select id="concern" name="concern" required>
+                  <option value="">Select a category</option>
+                  <option>Overheating</option>
+                  <option>Electrical issue</option>
+                  <option>Structural failure</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="source">Report source *</label>
+                <select id="source" name="source" required>
+                  <option value="">Select a source</option>
+                  <option>Customer review</option>
+                  <option>Incident report</option>
+                  <option>Laboratory report</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="description">Describe the concern *</label>
+              <textarea
+                id="description"
+                name="description"
+                required
+                maxlength="2000"
+                placeholder="What happened? What still needs to be checked?"
+              ></textarea>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>2. Supporting evidence</legend>
+            <div class="field">
+              <label for="evidence">Attach a report or product document</label>
+              <input
+                id="evidence"
+                type="file"
+                accept=".pdf,.jpg,.jpeg,.png,.txt"
+                multiple
+                aria-describedby="file-guidance"
+              >
+              <small id="file-guidance">
+                PDF, JPG, PNG, or TXT. Do not include personal contact information.
+              </small>
+            </div>
+            <div class="field">
+              <label for="evidence-note">Evidence note</label>
+              <input
+                id="evidence-note"
+                name="evidence-note"
+                type="text"
+                placeholder="e.g. Incident date still needs verification"
+              >
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>3. Assignment</legend>
+            <div class="form-grid">
+              <div class="field">
+                <label for="analyst">Assigned analyst *</label>
+                <select id="analyst" name="analyst" required>
+                  <option value="">Select an analyst</option>
+                  <option selected>M. Chen</option>
+                  <option>A. Patel</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="reviewer">Senior reviewer *</label>
+                <select id="reviewer" name="reviewer" required>
+                  <option value="">Select a reviewer</option>
+                  <option>J. Rivera</option>
+                  <option>S. Lee</option>
+                </select>
+              </div>
+            </div>
+            <div class="check-field">
+              <input id="ai-summary" name="ai-summary" type="checkbox" value="requested">
+              <label for="ai-summary">Request an AI summary after the case is created.</label>
+            </div>
+            <p class="muted small">A reviewer must check the evidence before approving closure.</p>
+          </fieldset>
+          <div class="form-actions">
+            <a href="list.html">Cancel</a>
+            <div class="actions">
+              <a class="button secondary" href="#draft-preview">Save draft</a>
+              <button class="button" type="submit">Create case</button>
+            </div>
+          </div>
+        </form>
+      </main>
+    </div>
+    <footer class="site-footer">
+      <p>Review Workspace</p>
+      <a href="index.html#photo-credits">Photo credits</a>
+      <a href="index.html#help">Review help</a>
+    </footer>
+  </body>
+</html>

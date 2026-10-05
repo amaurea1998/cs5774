@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>All cases | Review Workspace</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/vendor/jquery-3.7.1.min.js" defer></script>
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        Review Workspace
+        <small>Product safety</small>
+      </a>
+      <form class="header-search" action="search-results.html" method="get" role="search">
+        <label class="sr-only" for="header-search">Search cases</label>
+        <input id="header-search" name="q" type="search" placeholder="Try kettle" required>
+        <button class="button" type="submit">Search</button>
+      </form>
+      <div class="account">
+        <strong>J. Rivera</strong>
+        Senior reviewer
+      </div>
+    </header>
+    <div class="workspace">
+      <nav class="sidebar" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="list.html" aria-current="page">All cases</a></li>
+          <li><a href="new-case.html">New case</a></li>
+        </ul>
+      </nav>
+      <main id="main" tabindex="-1">
+        <div class="page-heading">
+          <div>
+            <h1>All cases</h1>
+            <p class="muted">Active product-safety reviews</p>
+          </div>
+          <a class="button" href="new-case.html">New case</a>
+        </div>
+        <div class="filters">
+          <div class="field">
+            <label for="status">Status</label>
+            <select id="status" name="status">
+              <option value="all">All cases</option>
+              <option value="review">Awaiting review</option>
+              <option value="open">Open</option>
+              <option value="draft">Draft</option>
+              <option value="closed">Closed</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="sort">Sort by</label>
+            <select id="sort" name="sort">
+              <option value="updated">Recently updated</option>
+              <option value="oldest">Oldest first</option>
+              <option value="product">Product name</option>
+            </select>
+          </div>
+          <a class="button secondary" href="list.html">Reset</a>
+        </div>
+        <p class="result-count" id="results">5 active cases &middot; Recently updated</p>
+        <div id="filter-notices" aria-live="polite" aria-atomic="true"></div>
+        <ul class="case-list">
+          <li id="case-1042" data-status="review" data-order="1">
+            <article>
+              <div class="case-row">
+                <div>
+                  <span class="case-id small">PS-1042</span>
+                  <h2><a href="detail.html">Countertop kettle</a></h2>
+                  <p>Model K1 &middot; Overheating report</p>
+                </div>
+                <div>
+                  <span class="row-label">Status</span>
+                  <span class="badge warning">Review AI update</span>
+                </div>
+                <div>
+                  <span class="row-label">Analyst / updated</span>
+                  <p>M. Chen &middot; 10:20 AM</p>
+                </div>
+              </div>
+              <details class="case-preview">
+                <summary>Case summary</summary>
+                <p>
+                  The independent incident report has not been verified. A pending AI plan proposes
+                  closing the case as a duplicate.
+                  <a href="review-update.html">Compare the changed requirement.</a>
+                </p>
+              </details>
+            </article>
+          </li>
+          <li id="case-1039" data-status="open" data-order="2">
+            <article>
+              <div class="case-row">
+                <div>
+                  <span class="case-id small">PS-1039</span>
+                  <h2>USB charger</h2>
+                  <p>Model C2 &middot; Hot casing report</p>
+                </div>
+                <div>
+                  <span class="row-label">Status</span>
+                  <span class="badge">Open</span>
+                </div>
+                <div>
+                  <span class="row-label">Analyst / updated</span>
+                  <p>M. Chen &middot; 9:55 AM</p>
+                </div>
+              </div>
+              <details class="case-preview">
+                <summary>Case summary</summary>
+                <p>
+                  A laboratory temperature report was added this morning. The analyst still needs to
+                  compare the reported use conditions with the product instructions. No closure
+                  decision has been made.
+                </p>
+              </details>
+            </article>
+          </li>
+          <li id="case-1035" data-status="review" data-order="3">
+            <article>
+              <div class="case-row">
+                <div>
+                  <span class="case-id small">PS-1035</span>
+                  <h2>Folding chair</h2>
+                  <p>Model F3 &middot; Joint failure report</p>
+                </div>
+                <div>
+                  <span class="row-label">Status</span>
+                  <span class="badge">Awaiting review</span>
+                </div>
+                <div>
+                  <span class="row-label">Analyst / updated</span>
+                  <p>A. Patel &middot; 9:30 AM</p>
+                </div>
+              </div>
+              <details class="case-preview">
+                <summary>Case summary</summary>
+                <p>
+                  The analyst has checked the incident date and model number. A senior reviewer must
+                  assess the supporting records before accepting the proposed disposition.
+                </p>
+              </details>
+            </article>
+          </li>
+          <li id="case-1031" data-status="open" data-order="4">
+            <article>
+              <div class="case-row">
+                <div>
+                  <span class="case-id small">PS-1031</span>
+                  <h2>Portable heater</h2>
+                  <p>Model H4 &middot; Odor during use</p>
+                </div>
+                <div>
+                  <span class="row-label">Status</span>
+                  <span class="badge">Open</span>
+                </div>
+                <div>
+                  <span class="row-label">Analyst / updated</span>
+                  <p>A. Patel &middot; Yesterday</p>
+                </div>
+              </div>
+              <details class="case-preview">
+                <summary>Case summary</summary>
+                <p>
+                  The review mentions an odor but does not identify visible damage or an injury. The
+                  analyst has requested the operating conditions and a photo of the model label.
+                </p>
+              </details>
+            </article>
+          </li>
+          <li id="case-1028" data-status="draft" data-order="5">
+            <article>
+              <div class="case-row">
+                <div>
+                  <span class="case-id small">PS-1028</span>
+                  <h2>Desk lamp</h2>
+                  <p>Model L2 &middot; Loose power connection</p>
+                </div>
+                <div>
+                  <span class="row-label">Status</span>
+                  <span class="badge">Draft</span>
+                </div>
+                <div>
+                  <span class="row-label">Analyst / updated</span>
+                  <p>M. Chen &middot; Yesterday</p>
+                </div>
+              </div>
+              <details class="case-preview">
+                <summary>Case summary</summary>
+                <p>
+                  The intake record is incomplete. The source report and product model need to be
+                  checked before this case is assigned for review.
+                </p>
+              </details>
+            </article>
+          </li>
+        </ul>
+      </main>
+    </div>
+    <footer class="site-footer">
+      <p>Review Workspace</p>
+      <a href="index.html#photo-credits">Photo credits</a>
+      <a href="index.html#help">Review help</a>
+    </footer>
+  </body>
+</html>

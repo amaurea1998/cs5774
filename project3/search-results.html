@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search results | Review Workspace</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/vendor/jquery-3.7.1.min.js" defer></script>
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        Review Workspace
+        <small>Product safety</small>
+      </a>
+      <form class="header-search" action="search-results.html" method="get" role="search">
+        <label class="sr-only" for="header-search">Search cases</label>
+        <input id="header-search" name="q" type="search" placeholder="Try kettle" required>
+        <button class="button" type="submit">Search</button>
+      </form>
+      <div class="account">
+        <strong>J. Rivera</strong>
+        Senior reviewer
+      </div>
+    </header>
+    <div class="workspace">
+      <nav class="sidebar" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="list.html">All cases</a></li>
+          <li><a href="new-case.html">New case</a></li>
+        </ul>
+      </nav>
+      <main id="main" tabindex="-1">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="list.html">All cases</a></li>
+            <li>Search results</li>
+          </ol>
+        </nav>
+        <div class="page-heading">
+          <div>
+            <h1 id="search-heading">Search results</h1>
+            <p id="search-count" class="muted" aria-live="polite"></p>
+          </div>
+          <a href="list.html">Back to all cases</a>
+        </div>
+        <section id="search-results" aria-label="Matching cases"></section>
+        <noscript><p>Turn on JavaScript to view the simulated search results.</p></noscript>
+      </main>
+    </div>
+    <footer class="site-footer">
+      <p>Review Workspace</p>
+      <a href="index.html#photo-credits">Photo credits</a>
+      <a href="index.html#help">Review help</a>
+    </footer>
+  </body>
+</html>

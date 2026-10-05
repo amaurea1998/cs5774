@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home | Review Workspace</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/vendor/jquery-3.7.1.min.js" defer></script>
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        Review Workspace
+        <small>Product safety</small>
+      </a>
+      <form class="header-search" action="search-results.html" method="get" role="search">
+        <label class="sr-only" for="header-search">Search cases</label>
+        <input id="header-search" name="q" type="search" placeholder="Try kettle" required>
+        <button class="button" type="submit">Search</button>
+      </form>
+      <div class="account">
+        <strong>J. Rivera</strong>
+        Senior reviewer
+      </div>
+    </header>
+    <div class="workspace">
+      <nav class="sidebar" aria-label="Primary">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="list.html">All cases</a></li>
+          <li><a href="new-case.html">New case</a></li>
+        </ul>
+      </nav>
+      <main id="main" tabindex="-1">
+        <div class="page-heading">
+          <div>
+            <h1>Your review queue</h1>
+            <p class="muted">Friday, September 25 &middot; Assigned to J. Rivera</p>
+          </div>
+          <a class="button" href="new-case.html">New case</a>
+        </div>
+        <div class="notice">
+          <div>
+            <strong>PS-1042: a required check became optional</strong>
+            <p>The pending AI update proposes closure before independent verification.</p>
+          </div>
+          <a class="button secondary" href="review-update.html">Review change</a>
+        </div>
+        <dl class="metrics">
+          <div>
+            <dt>Active cases</dt>
+            <dd>5</dd>
+          </div>
+          <div>
+            <dt>Awaiting review</dt>
+            <dd>2</dd>
+          </div>
+          <div>
+            <dt>Requirement changed</dt>
+            <dd>1</dd>
+          </div>
+        </dl>
+        <div class="two-columns">
+          <section>
+            <div class="section-heading">
+              <h2>Needs attention</h2>
+              <a class="small" href="list.html">All cases</a>
+            </div>
+            <ul class="queue">
+              <li>
+                <div>
+                  <span class="case-id small">PS-1042</span>
+                  <h3><a href="detail.html">Countertop kettle</a></h3>
+                  <p>R1 weakened in pending AI version 3.</p>
+                </div>
+                <a class="queue-action" href="review-update.html">Review update</a>
+              </li>
+              <li>
+                <div>
+                  <span class="case-id small">PS-1039</span>
+                  <h3>USB charger</h3>
+                  <p>A new test report needs review.</p>
+                </div>
+                <a class="queue-action" href="list.html#case-1039">View case summary</a>
+              </li>
+              <li>
+                <div>
+                  <span class="case-id small">PS-1035</span>
+                  <h3>Folding chair</h3>
+                  <p>Analyst review is complete.</p>
+                </div>
+                <a class="queue-action" href="list.html#case-1035">View case summary</a>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Recent activity</h2>
+            <ol class="activity">
+              <li>
+                <p><strong>AI update waiting for review</strong></p>
+                <p>
+                  <span class="case-id">PS-1042</span>
+                  &middot; Version 3
+                </p>
+                <time datetime="2026-09-25T10:20:00">10:20 AM</time>
+              </li>
+              <li>
+                <p><strong>M. Chen added a test report</strong></p>
+                <p>
+                  <span class="case-id">PS-1039</span>
+                  &middot; USB charger
+                </p>
+                <time datetime="2026-09-25T09:55:00">9:55 AM</time>
+              </li>
+              <li>
+                <p><strong>Review requested</strong></p>
+                <p>
+                  <span class="case-id">PS-1035</span>
+                  &middot; Folding chair
+                </p>
+                <time datetime="2026-09-25T09:30:00">9:30 AM</time>
+              </li>
+            </ol>
+          </section>
+        </div>
+        <section class="section">
+          <h2>Product references</h2>
+          <div class="image-pair">
+            <figure>
+              <!-- Electric-kettle.jpg, Baruzza, CC BY-SA 4.0. Unmodified.
+                 https://commons.wikimedia.org/wiki/File:Electric-kettle.jpg
+                 https://creativecommons.org/licenses/by-sa/4.0/ -->
+              <img
+                src="images/kettle.jpeg"
+                alt="A white electric kettle with a water-level window"
+                width="797"
+                height="993"
+              >
+              <figcaption>Kettle &middot; Illustrative product photo</figcaption>
+            </figure>
+            <figure>
+              <!-- USB wall charger.JPG, Alcide55, CC BY-SA 3.0. Unmodified.
+                 https://commons.wikimedia.org/wiki/File:USB_wall_charger.JPG
+                 https://creativecommons.org/licenses/by-sa/3.0/ -->
+              <img
+                src="images/charger.jpg"
+                alt="A black USB wall charger with a power plug"
+                width="600"
+                height="762"
+              >
+              <figcaption>USB charger &middot; Illustrative product photo</figcaption>
+            </figure>
+          </div>
+        </section>
+        <details class="minor-help" id="help">
+          <summary>About review requirements</summary>
+          <p>
+            A reviewer requirement is a condition that must be met before the case can close. An AI
+            suggestion does not remove that condition. Open the update to compare the proposed
+            wording with the original.
+          </p>
+        </details>
+        <details class="minor-help" id="photo-credits">
+          <summary>Photo credits</summary>
+          <p>
+            Kettle:
+            <a href="https://commons.wikimedia.org/wiki/File:Electric-kettle.jpg">Baruzza</a>
+            ,
+            <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+            . USB charger:
+            <a href="https://commons.wikimedia.org/wiki/File:USB_wall_charger.JPG">Alcide55</a>
+            ,
+            <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>
+            . Both photos are unmodified and used as illustrations.
+          </p>
+        </details>
+      </main>
+    </div>
+    <footer class="site-footer">
+      <p>Review Workspace</p>
+      <a href="index.html#photo-credits">Photo credits</a>
+      <a href="index.html#help">Review help</a>
+    </footer>
+  </body>
+</html>

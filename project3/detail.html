@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PS-1042: Countertop kettle | Review Workspace</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/vendor/jquery-3.7.1.min.js" defer></script>
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        Review Workspace
+        <small>Product safety</small>
+      </a>
+      <form class="header-search" action="search-results.html" method="get" role="search">
+        <label class="sr-only" for="header-search">Search cases</label>
+        <input id="header-search" name="q" type="search" placeholder="Try kettle" required>
+        <button class="button" type="submit">Search</button>
+      </form>
+      <div class="account">
+        <strong>J. Rivera</strong>
+        Senior reviewer
+      </div>
+    </header>
+    <div class="workspace">
+      <nav class="sidebar" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="list.html">All cases</a></li>
+          <li><a href="new-case.html">New case</a></li>
+        </ul>
+      </nav>
+      <main id="main" tabindex="-1">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="list.html">All cases</a></li>
+            <li><span class="case-id">PS-1042</span></li>
+          </ol>
+        </nav>
+        <div class="page-heading">
+          <div>
+            <h1>Countertop kettle</h1>
+            <p>
+              <span class="case-id">PS-1042</span>
+              &middot; Model K1 &middot;
+              <span class="badge">Open</span>
+            </p>
+          </div>
+          <a href="list.html">Back to all cases</a>
+        </div>
+        <section class="example-state state-panel" id="restored" tabindex="-1">
+          <h2>Independent verification is required</h2>
+          <p>
+            R1 is restored in the reviewed plan. The report still needs to be verified, so closure
+            remains blocked.
+          </p>
+        </section>
+        <section class="example-state state-panel" id="discarded" tabindex="-1">
+          <h2>Pending update discarded</h2>
+          <p>
+            The accepted plan is unchanged. The case remains open and R1 still requires independent
+            verification.
+          </p>
+        </section>
+        <section class="example-state state-panel" id="revision" tabindex="-1">
+          <h2>Revision requested</h2>
+          <p>The current plan remains in effect. The proposed closure is not approved.</p>
+        </section>
+        <div class="pending-review notice">
+          <div>
+            <strong>Pending AI update: R1 was weakened</strong>
+            <p>The suggested plan makes independent verification optional.</p>
+          </div>
+          <a class="button" href="review-update.html">Review AI update</a>
+        </div>
+        <div class="two-columns">
+          <div>
+            <section>
+              <h2>Case overview</h2>
+              <p>
+                A customer reports that the kettle continued heating after the switch was turned
+                off. The model number is K1. The incident report may overlap with an earlier record,
+                but the link has not been verified.
+              </p>
+              <dl class="case-facts">
+                <div>
+                  <dt>Assigned analyst</dt>
+                  <dd>M. Chen</dd>
+                </div>
+                <div>
+                  <dt>Senior reviewer</dt>
+                  <dd>J. Rivera</dd>
+                </div>
+                <div>
+                  <dt>Reported concern</dt>
+                  <dd>Overheating</dd>
+                </div>
+                <div>
+                  <dt>Current accepted plan</dt>
+                  <dd>Keep open; verify incident report</dd>
+                </div>
+              </dl>
+            </section>
+            <section class="section">
+              <h2>Evidence</h2>
+              <ul class="evidence-list">
+                <li>
+                  <details>
+                    <summary>Customer review &middot; September 23</summary>
+                    <p>
+                      "The kettle kept heating after I switched it off. I unplugged it. The label
+                      says K1." The review does not establish the cause or whether this is the same
+                      incident as the earlier record.
+                    </p>
+                  </details>
+                  <span class="badge">Read by analyst</span>
+                </li>
+                <li>
+                  <details>
+                    <summary>Independent incident report &middot; IR-287</summary>
+                    <p>
+                      The report has been located, but its date, product identifier, and
+                      relationship to the earlier record have not been independently checked.
+                    </p>
+                  </details>
+                  <span class="badge warning">Verification outstanding</span>
+                </li>
+                <li>
+                  <details>
+                    <summary>Product record &middot; Model K1</summary>
+                    <p>
+                      The record identifies the product model. It does not confirm the reported
+                      failure, establish a duplicate incident, or resolve the verification
+                      requirement.
+                    </p>
+                  </details>
+                  <span class="badge">Model checked</span>
+                </li>
+              </ul>
+            </section>
+            <section class="section">
+              <h2>Latest reviewer note</h2>
+              <p>
+                Keep this case open until the independent report is verified. Do not extend the
+                decision to other models.
+              </p>
+              <p class="muted small">J. Rivera &middot; September 24, 4:10 PM</p>
+            </section>
+          </div>
+          <section>
+            <h2>Reviewer requirements</h2>
+            <div class="requirement">
+              <p>
+                <strong>
+                  <span class="case-id">R1</span>
+                  Independent verification
+                </strong>
+              </p>
+              <p>Require independent verification before closure.</p>
+              <span class="badge warning">Not yet met</span>
+            </div>
+            <div class="requirement">
+              <p>
+                <strong>
+                  <span class="case-id">R2</span>
+                  Model scope
+                </strong>
+              </p>
+              <p>Limit the decision to Model K1.</p>
+              <span class="badge good">Preserved</span>
+            </div>
+            <div class="decision-area">
+              <h3>Closure decision</h3>
+              <button class="button" type="button" disabled aria-describedby="closure-reason">
+                Approve closure
+              </button>
+              <p id="closure-reason">
+                <strong>Blocked by R1.</strong>
+                The independent incident report has not been verified.
+              </p>
+            </div>
+            <div class="product-strip section">
+              <!-- Baruzza, Electric-kettle.jpg, CC BY-SA 4.0; unmodified.
+                 https://commons.wikimedia.org/wiki/File:Electric-kettle.jpg
+                 https://creativecommons.org/licenses/by-sa/4.0/ -->
+              <img
+                src="images/kettle.jpeg"
+                alt="Illustrative white electric kettle with a water-level window"
+                width="797"
+                height="993"
+              >
+              <div>
+                <p><strong>Product reference</strong></p>
+                <small class="muted">Illustrative photo; not incident evidence.</small>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <footer class="site-footer">
+      <p>Review Workspace</p>
+      <a href="index.html#photo-credits">Photo credits</a>
+      <a href="index.html#help">Review help</a>
+    </footer>
+  </body>
+</html>

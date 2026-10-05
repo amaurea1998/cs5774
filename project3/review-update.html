@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Review AI update: PS-1042 | Review Workspace</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/vendor/jquery-3.7.1.min.js" defer></script>
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        Review Workspace
+        <small>Product safety</small>
+      </a>
+      <form class="header-search" action="search-results.html" method="get" role="search">
+        <label class="sr-only" for="header-search">Search cases</label>
+        <input id="header-search" name="q" type="search" placeholder="Try kettle" required>
+        <button class="button" type="submit">Search</button>
+      </form>
+      <div class="account">
+        <strong>J. Rivera</strong>
+        Senior reviewer
+      </div>
+    </header>
+    <div class="workspace">
+      <nav class="sidebar" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="list.html">All cases</a></li>
+          <li><a href="new-case.html">New case</a></li>
+        </ul>
+      </nav>
+      <main id="main" tabindex="-1">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="list.html">All cases</a></li>
+            <li><a href="detail.html">PS-1042</a></li>
+            <li>Review AI update</li>
+          </ol>
+        </nav>
+        <div class="page-heading">
+          <div>
+            <h1>Review AI update</h1>
+            <p>
+              <span class="case-id">PS-1042</span>
+              &middot; Countertop kettle &middot;
+              <span class="badge">Open</span>
+            </p>
+          </div>
+          <a href="detail.html">Back to case</a>
+        </div>
+        <section class="example-state state-panel" id="restored" tabindex="-1">
+          <h2>R1 restored: verification is required</h2>
+          <p>
+            The reviewed plan keeps the case open until the independent incident report has been
+            verified. Restoring this condition does not mark the report as verified.
+          </p>
+          <div class="actions">
+            <a class="button" href="detail.html#restored">Return to case</a>
+            <a href="review-update.html">Back to comparison</a>
+          </div>
+        </section>
+        <section class="example-state state-panel" id="discarded" tabindex="-1">
+          <h2>Pending AI update discarded</h2>
+          <p>
+            The accepted plan and evidence are unchanged. R1 still blocks closure until independent
+            verification is complete.
+          </p>
+          <div class="actions">
+            <a class="button" href="detail.html#discarded">Return to case</a>
+            <a href="review-update.html">Back to comparison</a>
+          </div>
+        </section>
+        <section class="example-state state-panel" id="revision" tabindex="-1">
+          <h2>Revision requested</h2>
+          <p>
+            The revised plan must retain independent verification before closure and stay within
+            Model K1. The current accepted plan remains in effect.
+          </p>
+          <div class="actions">
+            <a class="button" href="detail.html#revision">Return to case</a>
+            <a href="review-update.html">Back to comparison</a>
+          </div>
+        </section>
+        <div class="pending-review" id="review-workflow">
+          <div class="notice update-warning">
+            <div>
+              <strong>One requirement was weakened</strong>
+              <p>AI version 3 has not been approved. Closure remains blocked.</p>
+            </div>
+            <span class="version small">v2 &rarr; v3</span>
+          </div>
+          <section>
+            <h2>What changed</h2>
+            <div class="comparison">
+              <div>
+                <h3>Original reviewer requirement</h3>
+                <p class="muted small">
+                  <span class="case-id">R1</span>
+                  &middot; J. Rivera
+                </p>
+                <blockquote>
+                  Do not close the case until the independent incident report has been verified.
+                </blockquote>
+                <span class="badge good">Verification required</span>
+              </div>
+              <div class="changed">
+                <h3>Proposed AI plan</h3>
+                <p class="muted small pending-version">Pending version 3</p>
+                <blockquote class="proposed-wording">
+                  Verification is
+                  <mark>recommended</mark>
+                  . Close as a duplicate; follow up on the report later.
+                </blockquote>
+                <span class="badge warning proposed-status">Closure before verification</span>
+              </div>
+            </div>
+            <p class="small">
+              <strong>
+                <span class="case-id">R2</span>
+                is unchanged:
+              </strong>
+              the decision remains limited to Model K1.
+            </p>
+          </section>
+          <section class="section">
+            <h2>Where the requirement changed</h2>
+            <ol class="handoffs">
+              <li>
+                <strong>1. Reviewer instruction</strong>
+                <p>Verify the independent report before closure.</p>
+              </li>
+              <li class="changed">
+                <strong>2. AI summary</strong>
+                <p>Verification becomes a recommended follow-up.</p>
+              </li>
+              <li class="changed">
+                <strong>3. Proposed action</strong>
+                <p>Close the case before the report is verified.</p>
+              </li>
+            </ol>
+          </section>
+          <section class="section">
+            <h2>Review decision</h2>
+            <div class="control-form">
+              <div class="field">
+                <label for="review-note">Review note</label>
+                <textarea id="review-note" name="note" rows="3">
+Keep the case open until the independent report has been verified. Limit the decision to Model K1.</textarea
+                >
+              </div>
+              <div class="actions">
+                <button class="button restore-requirement" type="button">
+                  Restore requirement
+                </button>
+                <a class="button secondary" href="#revision">Request revision</a>
+              </div>
+              <p class="muted small">
+                After restoration, the case stays open and verification is still outstanding.
+              </p>
+              <div class="review-feedback" aria-live="polite" aria-atomic="true"></div>
+            </div>
+            <details class="discard-area">
+              <summary>Discard pending AI update</summary>
+              <p>
+                Discard version 3? The accepted plan, evidence, and reviewer requirements will
+                remain unchanged.
+              </p>
+              <div class="actions">
+                <a class="button danger" href="#discarded">Discard update</a>
+                <a href="review-update.html">Keep reviewing</a>
+              </div>
+            </details>
+          </section>
+        </div>
+      </main>
+    </div>
+    <footer class="site-footer">
+      <p>Review Workspace</p>
+      <a href="index.html#photo-credits">Photo credits</a>
+      <a href="index.html#help">Review help</a>
+    </footer>
+  </body>
+</html>
